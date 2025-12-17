@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Sanches | Comunicação Visual</title>
+    <meta
+      name="description"
+      content="Charles Sanches - Profissional em instalação de comunicação visual"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --azul: #1c395f;
+        --cinza: #aaabab;
+        --laranja: #ef7525;
+        --branco: #ffffff;
+        --preto: #0f172a;
+        --bg: #f8fafc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--preto);
+        line-height: 1.6;
+      }
+
+      /* HEADER */
+      header {
+        background: linear-gradient(135deg, var(--azul), #0f2a4a);
+        color: var(--branco);
+        padding: 4rem 1.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(239, 117, 37, 0.35),
+          transparent 60%
+        );
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        position: relative;
+        z-index: 1;
+      }
+
+      header p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: var(--cinza);
+        position: relative;
+        z-index: 1;
+      }
+
+      /* CONTAINER */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 3rem 1.5rem;
+      }
+
+      /* SEÇÕES */
+      section {
+        margin-bottom: 4rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--azul);
+        position: relative;
+      }
+
+      section h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 60px;
+        height: 4px;
+        background: var(--laranja);
+        border-radius: 10px;
+      }
+
+      /* SOBRE */
+      .sobre {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .sobre p {
+        font-size: 1.05rem;
+        color: #334155;
+      }
+
+      .foto-placeholder {
+        width: 100%;
+        height: 320px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, var(--cinza), #e5e7eb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #475569;
+        font-size: 1rem;
+      }
+
+      /* SERVIÇOS */
+      .servicos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: var(--branco);
+        padding: 2rem;
+        border-radius: 22px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .card h3 {
+        color: var(--azul);
+        margin-bottom: 0.8rem;
+      }
+
+      .card p {
+        color: #475569;
+        font-size: 0.95rem;
+      }
+
+      /* GALERIA */
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .galeria .foto-placeholder {
+        height: 220px;
+      }
+
+      /* DADOS */
+      .dados {
+        background: linear-gradient(135deg, var(--azul), #102a4a);
+        color: var(--branco);
+        padding: 3rem 2rem;
+        border-radius: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+      }
+
+      .dados div span {
+        display: block;
+        font-size: 0.9rem;
+        color: var(--cinza);
+      }
+
+      .dados div strong {
+        font-size: 1.05rem;
+        margin-top: 0.2rem;
+        display: block;
+      }
+
+      /* FOOTER */
+      footer {
+        background: #020617;
+        color: var(--cinza);
+        text-align: center;
+        padding: 2rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      footer span {
+        color: var(--laranja);
+      }
+
+      /* RESPONSIVO */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+
+        .sobre {
+          grid-template-columns: 1fr;
+        }
+
+        .foto-placeholder {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Charles Sanches</h1>
+      <p>Especialista em Instalação de Comunicação Visual</p>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Sobre mim</h2>
+        <div class="sobre">
+          <p>
+            Sou <strong>Charles Sanches</strong>, profissional especializado em
+            instalação de comunicação visual, atuando com excelência, precisão e
+            compromisso com cada projeto. Trabalho com fachadas, adesivação,
+            letreiros, painéis e soluções visuais que valorizam marcas e
+            espaços.
+          </p>
+          <div class="foto-placeholder">Espaço para sua foto profissional</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Serviços</h2>
+        <div class="servicos">
+          <div class="card">
+            <h3>Fachadas e Letreiros</h3>
+            <p>
+              Instalação de fachadas modernas, letras caixa, ACM e estruturas
+              visuais de alto impacto.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Adesivação</h3>
+            <p>
+              Aplicação profissional de adesivos em vitrines, paredes, veículos
+              e ambientes internos.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Painéis e Comunicação Interna</h3>
+            <p>
+              Soluções visuais personalizadas para ambientes corporativos e
+              comerciais.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Galeria de Projetos</h2>
+        <div class="galeria">
+          <div class="foto-placeholder">Foto do projeto</div>
+          <div class="foto-placeholder">Foto do projeto</div>
+          <div class="foto-placeholder">Foto do projeto</div>
+          <div class="foto-placeholder">Foto do projeto</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Dados da Empresa</h2>
+        <div class="dados">
+          <div>
+            <span>Razão Social</span>
+            <strong>Empresa Exemplo Comunicação Visual LTDA</strong>
+          </div>
+          <div>
+            <span>CNPJ</span>
+            <strong>00.000.000/0001-00</strong>
+          </div>
+          <div>
+            <span>Telefone</span>
+            <strong>(00) 00000-0000</strong>
+          </div>
+          <div>
+            <span>E-mail</span>
+            <strong>contato@seudominio.com</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span>Charles Sanches</span> • Comunicação Visual • Todos os direitos
+      reservados
+    </footer>
+  </body>
+</html>
