@@ -176,9 +176,9 @@
         color: var(--branco);
         padding: 3rem 2rem;
         border-radius: 30px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .dados div span {
@@ -260,9 +260,18 @@
         }
 
         .dados {
-          padding: 2.2rem 1.5rem;
-          border-radius: 22px;
-          text-align: center;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.4rem;
+        }
+
+        .dados div {
+          width: 100%;
+        }
+
+        .dados div strong {
+          display: block;
+          margin-top: 0.2rem;
         }
 
         footer {
@@ -285,7 +294,11 @@
         gap: 0.6rem;
         color: var(--branco);
         text-decoration: none;
-        transition: color 0.3s ease, transform 0.2s ease;
+
+        /* 🔥 ESSENCIAL PARA NÃO ESTOURAR */
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
 
       .contato-link:hover {
